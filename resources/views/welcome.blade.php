@@ -4,7 +4,7 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyBukuPink - Your Pregnancy Journey</title>
+    <title>TheBukuPink - Your Pregnancy Journey</title>
     <!-- bootstrap href linkkk-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
@@ -88,26 +88,40 @@
 
             /* Mobile Responsiveness */
             @media screen and (max-width: 768px) {
-                header {
-                    flex-direction: column;
-                    text-align: center;
-                    padding: 15px;
-                }
-
-                nav ul {
-                    flex-direction: column;
-                    gap: 10px;
-                }
-
-                nav ul li {
-                    display: block;
-                }
-
-                .cta {
-                    display: inline-block;
-                    margin-top: 10px;
-                }
+            header {
+                display: flex;
+                flex-direction: column;
+                align-items: center; /* Center items */
+                text-align: center;
+                padding: 15px;
             }
+
+            nav ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center; /* Center menu items */
+                gap: 10px;
+                padding: 0;
+                list-style: none; /* Remove default bullets */
+            }
+
+            nav ul li {
+                width: 100%; /* Ensure full width for better tapping */
+            }
+
+            nav ul li a {
+                display: block;
+                padding: 10px 0;
+                width: 100%;
+                text-align: center;
+            }
+
+            .cta {
+                display: inline-block;
+                margin-top: 10px;
+                text-align: center;
+            }
+        }
 
             /* Hero Section */
             .hero {
@@ -122,13 +136,28 @@
 
             .hero-content {
                 position: absolute;
-                top: 40%;
+                top: 50%; /* Center vertically */
                 left: 50%;
                 transform: translate(-50%, -50%);
-                background: rgba(255, 255, 255, 0.8);
-                padding: 20px;
-                border-radius: 10px;
+                background: rgba(0, 0, 0, 0.5); /* Dark semi-transparent background */
+                color: white; /* Make text stand out */
+                padding: 20px 40px;
+                border-radius: 12px;
+                width: 80%; /* Adjust width for better layout */
+                max-width: 600px; /* Prevent it from being too wide */
+                
             }
+
+            .hero h1 {
+                font-size: 2rem;
+                font-weight: bold;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+                margin-top: 10px;
+            }
+
 
             /* Features Section */
             .overview {
@@ -151,16 +180,24 @@
             }
 
             .feature-item {
-                background: #fddcdf;
-                padding: 20px;
+                background: #ffe5e5; /* Soft pink */
+                border-radius: 12px;
+                padding: 15px;
                 text-align: center;
-                border-radius: 10px;
+                transition: transform 0.2s, box-shadow 0.3s;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             }
 
             .feature-item img {
-                width: 100%;
-                border-radius: 10px;
+                border-radius: 8px;
+                max-width: 100%;
             }
+
+            .feature-item:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+            }
+
 
             /* Who Can Use Section */
             .who-can-use {
@@ -225,6 +262,17 @@
             left: 0;
         }
 
+        .overview-item {
+            text-align: center;
+        }
+
+       .overview-item svg {
+            margin-bottom: 10px; /* Space between icon and title */
+            color: #ff6f61; /* Adjust color if needed */
+            width: 50px; /* Adjust size */
+            height: 50px;
+        }
+
     </style>
 </head>
 <body>
@@ -238,7 +286,7 @@
         <a href="#"><i class="fas fa-phone"></i> 📞 Contact</a>
     </nav>
 <header>
-        <a href="#" class="logo">MyBukuPink</a>
+        <a href="#" class="logo">TheBukuPink</a>
        
         <nav>
             <ul>
@@ -264,14 +312,17 @@
 
     <section class="overview">
         <div class="overview-item">
+            <img src="{{ asset('images/calendar.png') }}" alt="Pregnancy Tracker Icon" width="70" height="70">
             <h2>Pregnancy Tracker</h2>
             <p>Monitor baby growth & health easily.</p>
         </div>
         <div class="overview-item">
+        <img src="{{ asset('images/checkup.png') }}" alt="Pregnancy Tracker Icon" width="70" height="70">
             <h2>Book Appointments</h2>
             <p>Schedule doctor visits with ease.</p>
         </div>
         <div class="overview-item">
+        <img src="{{ asset('images/food.png') }}" alt="Pregnancy Tracker Icon" width="70" height="70">
             <h2>Nutritional Plans</h2>
             <p>Personalized diet recommendations.</p>
         </div>
@@ -279,7 +330,7 @@
 
     <section class="detailed-features">
         <div class="feature-item">
-            <img src="{{ asset('images/lp1.webp') }}" alt="Pregnancy Tracker">
+            <img src="{{ asset('images/lp1.jpg') }}" alt="Pregnancy Tracker">
             <h3>Pregnancy Tracker</h3>
             <p>Track milestones, symptoms, and fetal development with ease.</p>
         </div>
@@ -289,7 +340,7 @@
             <p>Easy online doctor scheduling with automated reminders.</p>
         </div>
         <div class="feature-item">
-            <img src="{{ asset('images/lp3.jpeg') }}" alt="Nutritional Plans">
+            <img src="{{ asset('images/lp3.jpg') }}" alt="Nutritional Plans">
             <h3>Nutritional Plans</h3>
             <p>Get expert diet advice tailored for your pregnancy stage.</p>
         </div>
@@ -298,19 +349,19 @@
     <section class="who-can-use">
         <h2>Who Can Use This?</h2>
         <div class="user-group">
-            <img src="expecting-mom.jpg" alt="Expecting Moms">
+            <img src="{{ asset('images/mother.png') }}" alt="Expecting Moms" width="70" height="70" >
             <h3>Expecting Moms</h3>
             <p>Stay organized and track your progress.</p>
         </div>
         <div class="user-group">
-            <img src="doctor.jpg" alt="Doctors">
+            <img src="{{ asset('images/doctor.png') }}" alt="Doctors" width="70" height="70" >
             <h3>Doctors</h3>
             <p>Manage appointments and track patient progress.</p>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2025 MyBukuPink. All Rights Reserved.</p>
+        <p>&copy; 2025 TheBukuPink. All Rights Reserved.</p>
     </footer>
 
     <script src="script.js"></script>
