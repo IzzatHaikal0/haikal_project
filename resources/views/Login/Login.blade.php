@@ -96,7 +96,7 @@
                 </ul>
             </div>
         @endif
-              <form method="post" action="{{ route('LoginPost') }}">
+              <form method="post" action=>
                 @csrf
                 <!-- Username input -->
                 <div data-mdb-input-init class="form-outline mb-4">

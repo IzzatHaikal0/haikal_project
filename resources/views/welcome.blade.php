@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyBukuPink - Your Pregnancy Journey</title>
-    <link rel="stylesheet" href="../css/styles.css">
+    <!-- bootstrap href linkkk-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
                 /* General Styles */
             body {
@@ -180,15 +182,67 @@
                 color: white;
             }
 
+            .sidebar {
+            width: 250px;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: -250px;
+            background: #343a40;
+            color: white;
+            padding: 15px;
+            transition: left 0.3s ease;
+            z-index: 1050; /* Ensures sidebar stays on top */
+        }
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .sidebar a:hover {
+            background: #495057;
+        }
+        /* Toggle button */
+        .toggle-btn {
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            background: #343a40;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            z-index: 1100; /* Button stays on top */
+            border-radius: 5px;
+        }
+        .toggle-btn:hover {
+            background: #495057;
+        }
+        /* Sidebar active state */
+        .sidebar.active {
+            left: 0;
+        }
+
     </style>
 </head>
 <body>
+<button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+    <nav class="sidebar" id="sidebar">
+        <h2>Sidebar Menu</h2>
+        <a href="#"><i class="fas fa-cog"></i> 🏠 Home</a>
+        <a href="#"><i class="fas fa-phone"></i> 📂 Dashboard</a>
+        <a href="#"><i class="fas fa-phone"></i> ⚙️ Settings</a>
+        <a href="#"><i class="fas fa-phone"></i> 📞 Contact</a>
+    </nav>
 <header>
         <a href="#" class="logo">MyBukuPink</a>
        
         <nav>
             <ul>
-                <li><a href="#register" class="cta">Register</a></li>
+            <li><a href="{{ url('/login') }}" class="cta">Register</a></li>
+
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -198,7 +252,7 @@
         </nav>
         
     </header>
-    
+
     <section class="hero">
     <img src="{{ asset('images/header.jpg') }}" alt="Mother and baby" class="hero-image">
         <div class="hero-content">
@@ -259,5 +313,10 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        function toggleSidebar() {
+            document.getElementById("sidebar").classList.toggle("active");
+        }
+    </script>
 </body>
 </html>
