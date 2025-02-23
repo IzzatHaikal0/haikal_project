@@ -188,7 +188,7 @@
             position: fixed;
             top: 0;
             left: -250px;
-            background: #343a40;
+            background: #d48ba2;
             color: white;
             padding: 15px;
             transition: left 0.3s ease;
@@ -202,14 +202,14 @@
             border-radius: 5px;
         }
         .sidebar a:hover {
-            background: #495057;
+            background: #fddcdf;
         }
         /* Toggle button */
         .toggle-btn {
             position: fixed;
             top: 15px;
             left: 15px;
-            background: #343a40;
+            background: #d48ba2;
             color: white;
             border: none;
             padding: 10px 15px;
@@ -218,7 +218,7 @@
             border-radius: 5px;
         }
         .toggle-btn:hover {
-            background: #495057;
+            background: #fddcdf;
         }
         /* Sidebar active state */
         .sidebar.active {
@@ -230,6 +230,7 @@
 <body>
 <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
     <nav class="sidebar" id="sidebar">
+        <br><br>
         <h2>Sidebar Menu</h2>
         <a href="#"><i class="fas fa-cog"></i> 🏠 Home</a>
         <a href="#"><i class="fas fa-phone"></i> 📂 Dashboard</a>
