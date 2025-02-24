@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TheBukuPink - Your Pregnancy Journey</title>
     <!-- bootstrap href linkkk-->
+    <!--<link href="../css/styles.css" rel="stylesheet">-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
@@ -88,40 +89,25 @@
 
             /* Mobile Responsiveness */
             @media screen and (max-width: 768px) {
-            header {
-                display: flex;
-                flex-direction: column;
-                align-items: center; /* Center items */
-                text-align: center;
-                padding: 15px;
+                header {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center; /* Center items */
+                    text-align: center;
+                    padding: 15px;
+                }
+
+                /* Hide the top navigation bar on small screens */
+                header nav {
+                    display: none;
+                }
+
+                /* Ensure the sidebar toggle button remains accessible */
+                .toggle-btn {
+                    display: block; /* Show sidebar toggle button */
+                }
             }
 
-            nav ul {
-                display: flex;
-                flex-direction: column;
-                align-items: center; /* Center menu items */
-                gap: 10px;
-                padding: 0;
-                list-style: none; /* Remove default bullets */
-            }
-
-            nav ul li {
-                width: 100%; /* Ensure full width for better tapping */
-            }
-
-            nav ul li a {
-                display: block;
-                padding: 10px 0;
-                width: 100%;
-                text-align: center;
-            }
-
-            .cta {
-                display: inline-block;
-                margin-top: 10px;
-                text-align: center;
-            }
-        }
 
             /* Hero Section */
             .hero {
@@ -219,7 +205,7 @@
                 color: white;
             }
 
-            .sidebar {
+        .sidebar {
             width: 250px;
             height: 100vh;
             position: fixed;
@@ -280,10 +266,11 @@
     <nav class="sidebar" id="sidebar">
         <br><br>
         <h2>Sidebar Menu</h2>
-        <a href="#"><i class="fas fa-cog"></i> 🏠 Home</a>
-        <a href="#"><i class="fas fa-phone"></i> 📂 Dashboard</a>
-        <a href="#"><i class="fas fa-phone"></i> ⚙️ Settings</a>
-        <a href="#"><i class="fas fa-phone"></i> 📞 Contact</a>
+        <a href="{{ url('/login') }}">login</a><br>
+        <a href="#"><i class="fas fa-cog"></i> 🏠 Home</a><br>
+        <a href="#"><i class="fas fa-phone"></i> 📂 About</a><br>
+        <a href="#"><i class="fas fa-phone"></i> ⚙️ Contact</a><br>
+        <a href="#"><i class="fas fa-phone"></i> 📞 Features</a><br>
     </nav>
 <header>
         <a href="#" class="logo">TheBukuPink</a>

@@ -3,161 +3,242 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <title>Login</title>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
   <style>
-    .background-radial-gradient {
-      background-color: #054bb4;
-      background-image: radial-gradient(650px circle at 0% 0%,
-          hsl(218, 41%, 35%) 15%,
-          hsl(218, 41%, 30%) 35%,
-          hsl(218, 41%, 20%) 75%,
-          hsl(218, 41%, 19%) 80%,
-          transparent 100%),
-        radial-gradient(1250px circle at 100% 100%,
-          hsl(218, 41%, 45%) 15%,
-          hsl(218, 41%, 30%) 35%,
-          hsl(218, 41%, 20%) 75%,
-          hsl(218, 41%, 19%) 80%,
-          transparent 100%);
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-    #radius-shape-1 {
-      height: 220px;
-      width: 220px;
-      top: -60px;
-      left: -130px;
-      background: radial-gradient(#658cc2, #2e5caf);
-      overflow: hidden;
-      background-size: cover;
-    }
-    #radius-shape-2 {
-      border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
-      bottom: -60px;
-      right: -110px;
-      width: 300px;
-      height: 300px;
-      background: radial-gradient(#658cc2, #2e5caf);
-      overflow: hidden;
-      background-size: cover;
-    }
-    #button-forgotPassword {
-      color: #ffffff;
-    }
-    .bg-glass {
-      background-color: rgba(255, 255, 255, 0.9) !important;
-      backdrop-filter: saturate(200%) blur(25px);
-      background-size: cover;
-    }
+     
+            * {
+              margin: 0;
+              padding: 0;
+              box-sizing: border-box;
+          }
+
+          body, html {
+              font-family: Arial, sans-serif;
+              height: 100vh;
+              width: 100vw;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              background: linear-gradient(to bottom, #e3c3ff,rgba(138, 181, 255, 0));
+          }
+
+          /* Full-Screen Container */
+          .container {
+              display: flex;
+              flex-direction: row;
+              width: 80%; /* Adjusted for better responsiveness */
+              max-width: 900px; /* Prevents it from being too wide */
+              min-height: 400px;
+              background: white;
+              box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+              border-radius: 5px;
+              overflow: hidden;
+              padding: 0;
+              margin: 0;
+          }
+
+          /* Left Section (Login Form) */
+          .login-box {
+              width: 50%;
+              padding: 40px;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              background: white;
+          }
+
+          .login-container {
+              width: 100%;
+              padding: 20px;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              border: none;
+              box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+              border-radius: 5px;
+          }
+
+          .logo {
+              position: absolute;
+              top: 20px;
+              left: 20px;
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              font-size: 22px;
+              font-weight: bold;
+          }
+
+          /* Ensure logo resizes well on smaller screens */
+          @media (max-width: 768px) {
+              .logo {
+                  font-size: 18px; /* Reduce size on smaller screens */
+                  top: 10px;
+                  left: 10px;
+              }
+          }
+
+          h1  {
+              font-size: 24px;
+              font-weight: bold;
+              text-decoration: none;
+              color: #333;
+          }
+
+          h2 {
+              margin-bottom: 20px;
+              font-size: 22px;
+              color: #222;
+              font-weight: bold;
+              text-align: center;
+          }
+
+          /* Form Styles */
+          form {
+              display: flex;
+              flex-direction: column;
+          }
+
+          label {
+              font-size: 14px;
+              margin: 5px 0;
+              color: #444;
+          }
+
+          input, select {
+              width: 100%;
+              padding: 12px;
+              margin-bottom: 15px;
+              border: 1px solid #ccc;
+              border-radius: 5px;
+              font-size: 14px;
+          }
+
+          select {
+              appearance: none;
+              background-color: #fff;
+              cursor: pointer;
+          }
+
+          /* Button */
+          .btn {
+              padding: 12px;
+              background: pink;
+              border: none;
+              border-radius: 5px;
+              cursor: pointer;
+              color: white;
+              font-size: 16px;
+              transition: 0.3s;
+          }
+
+          .btn:hover {
+              background: rgb(253, 175, 209);
+          }
+
+          /* Forgot Password & Sign Up */
+          .forgot-password {
+              font-size: 12px;
+              margin-top: 10px;
+              color: blue;
+              text-decoration: none;
+              text-align: center;
+          }
+
+          .signup-text {
+              margin-top: 20px;
+              font-size: 14px;
+              text-align: center;
+          }
+
+          .signup-text a {
+              color: blue;
+              text-decoration: none;
+              font-weight: bold;
+          }
+
+          /* Right Section (Gradient Background) */
+          .background {
+              width: 50%;
+              background: linear-gradient(to bottom, #e3c3ff, #8ab5ff);
+              border-radius: 5px;
+          }
+
+          @media screen and (max-width: 768px) {
+              .background {
+                  display: none;
+              }
+          }
+
+          /* ---------- Responsive Design ---------- */
+          @media (max-width: 768px) {
+              .container {
+                  flex-direction: column;
+                  width: 90%;
+                  max-width: 400px;
+              }
+
+              .login-box, .background {
+                  width: 100%;
+              }
+
+              .background {
+                  height: 200px; /* Adjust gradient section height for mobile */
+              }
+
+              h2 {
+                  font-size: 18px;
+              }
+
+              .btn {
+                  font-size: 14px;
+              }
+          }
+
+
   </style>
 </head>
 <body>
-  <!-- Section: Design Block -->
-  <section class="background-radial-gradient overflow-hidden">
-    <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
-      <div class="row gx-lg-5 align-items-center mb-5">
-        <div class="col-lg-6 mb-5 mb-lg-0" style="z-index: 10">
-          <h1 class="my-5 display-5 fw-bold ls-tight" style="color: hsl(218, 81%, 95%)">
-            The best offer <br />
-            <span style="color: hsl(218, 81%, 75%)">Finish your Thesis within 6 months?</span>
-          </h1>
-          <p class="mb-4 opacity-70" style="color: hsl(218, 81%, 85%)">
-            ThesisPro offers you opportunity to help you finish your thesis and graduate on time! Do not lose this opportunity!
-          </p>
-        </div>
+    <div class="logo">
+        <!--<span class="logo-icon"></span>-->
+        <h1>TheBukuPink</h1>
+    </div>
 
-        <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
-          <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>
-          <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
+    <div class="container">
+        <div class="login-box">
 
-          <div class="card bg-glass">
-            <div class="card-body px-4 py-5 px-md-5">
-               <!-- Display success message -->
-        @if (session('success'))
-            <div class="alert alert-success">{{ session('success') }}</div>
-        @endif
+            <h2>Sign In to TheBukuPink</h2>
+            <div class="login-container">
 
-        <!-- Display error message -->
-        @if (session('error'))
-            <div class="alert alert-danger">{{ session('error') }}</div>
-        @endif
+            <!--fix this part(suppose to be POST not GET)-->
+            <form action="{{ url('/sidebar') }}" method="GET">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="examplemom@gmail.com" required>
 
-        <!-- Display validation errors -->
-        @if ($errors->any())
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
-              <form method="post" action=>
-                @csrf
-                <!-- Username input -->
-                <div data-mdb-input-init class="form-outline mb-4">
-                  <label class="form-label" for="form3Example3">Username</label>
-                  <input type="text" id="form3Example3" name="email" class="form-control @error('username') is-invalid @enderror" placeholder="Enter username" value="{{ old('username') }}" />
-                  @error('username')
-                    <div class="invalid-feedback">
-                      {{ $message }}
-                    </div>
-                  @enderror
-                </div>
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="●●●●●●●●●●●"required>
 
-                <!-- Password input -->
-                <div data-mdb-input-init class="form-outline mb-4">
-                  <label class="form-label" for="form3Example4">Password</label>
-                  <input type="password" id="form3Example4" name="password" class="form-control @error('password') is-invalid @enderror" placeholder="Enter password" />
-                  @error('password')
-                    <div class="invalid-feedback">
-                      {{ $message }}
-                    </div>
-                  @enderror
-                </div>
+                <label for="user-type">User Type</label>
+                <select id="user-type" required>
+                  
+                    <option value="" disabled selected>Select User Type</option>
+                    <option value="mother">Mother</option>
+                    <option value="doctor">Doctor</option>
+                    <option value="staff">Staff</option>
+                </select>
 
-                <!-- Category select -->
-                <div class="form-outline mb-4">
-                  <select class="form-select @error('category') is-invalid @enderror" name="role" aria-label="Default select example">
-                    <option value="" selected>Select your category</option>
-                    <option value="platinum" >Platinum</option>
-                    <option value="staff" >Staff</option>
-                    <option value="mentor" >Mentor</option>
-                  </select>
-                  @error('category')
-                    <div class="invalid-feedback">
-                      {{ $message }}
-                    </div>
-                  @enderror
-                </div>
+                <button type="submit" class="btn">Sign In</button>
 
-                <!-- Submit button -->
-                <div class="text-center">
-                  <button type="submit" name="login" class="btn btn-primary btn-block mb-4">Login</button>
-                  <a href="http://127.0.0.1:8000/ForgotPassword" class="btn btn-primary btn-block mb-4">Forgot password</a>
-                </div>
-              </form>
-            </div>
+                <a href="#" class="forgot-password">Forgot Password?</a>
+            </form>
+            <p class="signup-text">Don't have an account? <a href="#">Sign Up</a></p>
           </div>
         </div>
-      </div>
+        <div class="background"></div>
     </div>
-  </section>
-  <table class="center" style="margin: 0 auto;">
-                <tr>
-                    <td class="column" style="text-align: center;">
-                        <img src="{{ URL('images/logo.jpg') }}" alt="logo" width="150" height="150">
-                    </td>
-                    <td style="width: 800px; text-align: justify;">
-                        <p>THESISPRO is a premier academic platform designed to support postgraduate students in managing and showcasing their scholarly work. Our system offers a comprehensive suite of tools for editing, publishing, and sharing research and publications within expert domains. By facilitating seamless interactions among students, mentors, and staff, THESISPRO aims to enhance academic collaboration and promote excellence in research and education.</p>
-                    </td>
-                </tr>
-            </table>
-            <hr>
-            <p style="text-align:center;">Copyright &copy; 2024 THESISPRO Corporation. All Rights Reserved.</p>
 </body>
 </html>
