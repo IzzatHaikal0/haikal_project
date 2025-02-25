@@ -130,7 +130,7 @@
             <br><br>
             <h2>Sidebar Menu</h2>
             <a href="#"><i class="fas fa-phone"></i> Dashboard</a><br>
-            <a href="#"><i class="fas fa-cog"></i> Profile</a><br>
+            <a href="{{ url('/Profile') }}"><i class="fas fa-cog"></i> Profile</a><br>
             <a href="#"><i class="fas fa-phone"></i> Appointment</a><br>
             <a href="#"><i class="fas fa-phone"></i> Nutritions</a><br>
             <a href="#"><i class="fas fa-phone"></i> Community</a><br>
@@ -139,7 +139,7 @@
         </nav>
 
 
-        <header>
+    <header>
         <a href="#" class="logo">TheBukuPink</a>
        
         <nav>
@@ -147,6 +147,15 @@
         </nav>
         
     </header>
+
+    <!-- Section for page-specific content -->
+    @yield('content')
+    
+    <script>
+        function toggleSidebar() {
+            document.getElementById("sidebar").classList.toggle("active");
+        }
+    </script>
 </body>
 
 <!--FIX SIDEBAR WONT OPEN-->

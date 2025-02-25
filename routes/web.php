@@ -17,3 +17,8 @@ Route::get('/sidebar', function () {
     return view('sidebar.patient');
 
 });
+
+Route::get('/Profile', function () {
+    return view('Profile.Patient.PatientProfile');
+
+});

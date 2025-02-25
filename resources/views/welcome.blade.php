@@ -267,7 +267,8 @@
         <br><br>
         <h2>Sidebar Menu</h2>
         <a href="{{ url('/login') }}">login</a><br>
-        <a href="#"><i class="fas fa-cog"></i> 🏠 Home</a><br>
+        <!--DONT FORGET TO CHANGE URL-->
+        <a href="{{ url('/Profile') }}"><i class="fas fa-cog"></i> 🏠 Home</a><br>
         <a href="#"><i class="fas fa-phone"></i> 📂 About</a><br>
         <a href="#"><i class="fas fa-phone"></i> ⚙️ Contact</a><br>
         <a href="#"><i class="fas fa-phone"></i> 📞 Features</a><br>

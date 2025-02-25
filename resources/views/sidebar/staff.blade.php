@@ -146,6 +146,12 @@
         </nav>
         
     </header>
+
+    <script>
+        function toggleSidebar() {
+            document.getElementById("sidebar").classList.toggle("active");
+        }
+    </script>
 </body>
 
 <!--FIX SIDEBAR WONT OPEN-->
