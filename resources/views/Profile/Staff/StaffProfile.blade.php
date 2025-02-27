@@ -140,9 +140,8 @@
     <div class="profile-container">
         <div class="profile-header">
             <h2>Edit Profile</h2>
-            <img src="{{ asset('images/mother.png') }}" alt="Profile Picture" class="profile-pic">
+            <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
         </div>
-    <div class="section">
         <h4>Personal Information</h4>
         <form class="profile-form">
             <div class="input-group">
@@ -168,25 +167,6 @@
                     <input type="text" placeholder="1999-09-09">
                 </div>
             </div>
-    </div>
-    <div class="section">
-           <h4>Address Information</h4>
-            <div class="input-group">
-                <label>Address</label>
-                <input type="text" placeholder="Taman Makmur Beruas Jaya">
-            </div>
-            <div class="input-row">
-                <div class="input-group">
-                    <label>State</label>
-                    <select>
-                    <option selected disabled>Select State</option><option>Johor</option><option>Kedah</option><option>Kelantan</option><option>Melaka</option><option>Negeri Sembilan</option><option>Pahang</option><option>Perak</option><option>Perlis</option><option>Pulau Pinang</option><option>Sabah</option><option>Sarawak</option><option>Selangor</option><option>Terengganu</option><option>Wilayah Persekutuan (Kuala Lumpur, Labuan, Putrajaya)</option> 
-                    </select>
-                </div>
-                <div class="input-group">
-                    <label>City</label>
-                    <input type="text" placeholder="State">
-                </div>
-            </div>
             <div class="input-group">
                 <label>Password</label>
                 <input type="password" placeholder="●●●●●●●●●●">
@@ -196,7 +176,6 @@
                 <button class="cancel">Cancel</button>
                 <button class="save">Save</button>
             </div>
-    </div>
         </form>
     </div>
 </body>

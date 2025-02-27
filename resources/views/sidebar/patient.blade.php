@@ -129,7 +129,7 @@
         <nav class="sidebar" id="sidebar">
             <br><br>
             <h2>Sidebar Menu</h2>
-            <a href="#"><i class="fas fa-phone"></i> Dashboard</a><br>
+            <a href="{{ url('/PregnancyTracker') }}"><i class="fas fa-phone"></i> Dashboard</a><br>
             <a href="{{ url('/Profile') }}"><i class="fas fa-cog"></i> Profile</a><br>
             <a href="#"><i class="fas fa-phone"></i> Appointment</a><br>
             <a href="#"><i class="fas fa-phone"></i> Nutritions</a><br>

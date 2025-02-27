@@ -1,7 +1,8 @@
 @extends('sidebar.patient')
-
 @section('content')
-    <style>
+
+<style>
+
                     * {
                 margin: 0;
                 padding: 0;
@@ -17,7 +18,7 @@
                 height: 100vh;
             }
 
-            .profile-container {
+            .tracker-container {
                 max-width: 600px;
                 margin:  auto;
                 background: #fff;
@@ -28,14 +29,14 @@
                 box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
             }
 
-            .profile-header {
+            .tracker-header {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 margin-bottom: 20px;
             }
 
-            .profile-header h2 {
+            .tracker-header h2 {
                 font-size: 24px;
                 font-weight: bold;
             }
@@ -58,16 +59,16 @@
 
             /* Media Query for Small Screens */
             @media (max-width: 600px) {
-                .profile-container {
+                .tracker-container {
                     padding: 15px;
                 }
 
-                .profile-header {
+                .tracker-header {
                     flex-direction: column;
                     align-items: flex-start;
                 }
 
-                .profile-header h2 {
+                .tracker-header h2 {
                     font-size: 16px;
                     margin-bottom: 10px;
                 }
@@ -135,63 +136,37 @@
                 color: white;
             }
 
-    </style>
+</style>   
+
 <body>
-    <div class="profile-container">
-        <div class="profile-header">
-            <h2>Edit Profile</h2>
+    <div class="tracker-container">
+        <div class="tracker-header">
+            <h2>View Tracker</h2>
             <img src="{{ asset('images/mother.png') }}" alt="Profile Picture" class="profile-pic">
         </div>
-    <div class="section">
-        <h4>Personal Information</h4>
+        <div class="section">
+        <h4>Pregnancy Information</h4>
         <form class="profile-form">
             <div class="input-group">
-                <label>Full Name</label>
-                <input type="text" placeholder="Patient's Name">
-            </div>
-            <div class="input-group">
-                <label>IC/Passport Number</label>
-                <input type="text" placeholder="999999-99-9999">
-            </div>
-            <div class="input-group">
-                <label>Email</label>
-                <input type="email" placeholder="Mother@gmail.com">
-                <span class="verified">✔</span>
+                <label>Last Menstrual Period (LMP)</label>
+                <input type="date">
             </div>
             <div class="input-row">
                 <div class="input-group">
-                    <label>Phone Number</label>
-                    <input type="text" placeholder="019-9999999">
+                    <label>Number of Pregnancy</label>
+                    <input type="text" placeholder="e.g. 1">
                 </div>
                 <div class="input-group">
-                    <label>Date of Birth</label>
-                    <input type="text" placeholder="1999-09-09">
+                    <label>Number of Birth</label>
+                    <input type="text" placeholder="e.g. 1">
                 </div>
             </div>
     </div>
-    <div class="section">
-           <h4>Address Information</h4>
             <div class="input-group">
-                <label>Address</label>
-                <input type="text" placeholder="Taman Makmur Beruas Jaya">
+                <label>Complication (If Any)</label>
+                <input type="text" placeholder="Stomach ache in the middle of the night along with severe headache">
             </div>
-            <div class="input-row">
-                <div class="input-group">
-                    <label>State</label>
-                    <select>
-                    <option selected disabled>Select State</option><option>Johor</option><option>Kedah</option><option>Kelantan</option><option>Melaka</option><option>Negeri Sembilan</option><option>Pahang</option><option>Perak</option><option>Perlis</option><option>Pulau Pinang</option><option>Sabah</option><option>Sarawak</option><option>Selangor</option><option>Terengganu</option><option>Wilayah Persekutuan (Kuala Lumpur, Labuan, Putrajaya)</option> 
-                    </select>
-                </div>
-                <div class="input-group">
-                    <label>City</label>
-                    <input type="text" placeholder="State">
-                </div>
-            </div>
-            <div class="input-group">
-                <label>Password</label>
-                <input type="password" placeholder="●●●●●●●●●●">
-                <span class="verified">✔</span>
-            </div>
+
             <div class="button-group">
                 <button class="cancel">Cancel</button>
                 <button class="save">Save</button>
@@ -200,5 +175,3 @@
         </form>
     </div>
 </body>
-
-@endsection

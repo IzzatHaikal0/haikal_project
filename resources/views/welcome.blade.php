@@ -266,7 +266,7 @@
     <nav class="sidebar" id="sidebar">
         <br><br>
         <h2>Sidebar Menu</h2>
-        <a href="{{ url('/login') }}">login</a><br>
+        <a href="{{ url('/login') }}">🔒 login</a><br>
         <!--DONT FORGET TO CHANGE URL-->
         <a href="{{ url('/Profile') }}"><i class="fas fa-cog"></i> 🏠 Home</a><br>
         <a href="#"><i class="fas fa-phone"></i> 📂 About</a><br>
@@ -278,7 +278,7 @@
        
         <nav>
             <ul>
-            <li><a href="{{ url('/login') }}" class="cta">Register</a></li>
+            <li><a href="{{ url('/login') }}" class="cta">Login</a></li>
 
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -331,6 +331,11 @@
             <img src="{{ asset('images/lp3.jpg') }}" alt="Nutritional Plans">
             <h3>Nutritional Plans</h3>
             <p>Get expert diet advice tailored for your pregnancy stage.</p>
+        </div>
+        <div class="feature-item">
+            <img src="{{ asset('images/lp3.jpg') }}" alt="Nutritional Plans">
+            <h3>Community</h3>
+            <p>Discuss and share your journey with fellow users. </p>
         </div>
     </section>
 
