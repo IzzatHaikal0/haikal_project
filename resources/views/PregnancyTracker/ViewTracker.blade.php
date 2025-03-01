@@ -116,12 +116,13 @@
                 display: flex;
                 justify-content: space-between;
                 margin-top: 10px;
+                
             }
 
             button {
                 border: none;
                 padding: 8px 15px;
-                border-radius: 5px;
+                border-radius: 5px !important;
                 cursor: pointer;
                 font-size: 14px;
             }

@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     @vite(['resources/css/app.css'])
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TheBukuPink - Your Pregnancy Journey</title>
     <!-- bootstrap href linkkk-->
-    <!--<link href="../css/styles.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="{{ asset('css/LandingPage/styles.css') }}">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <style>
+    <!--<style>
                 /* General Styles */
             body {
                 font-family: Arial, sans-serif;
@@ -133,6 +136,7 @@
                 border-radius: 12px;
                 width: 80%; /* Adjust width for better layout */
                 max-width: 600px; /* Prevent it from being too wide */
+                
 
                 
                 
@@ -140,9 +144,9 @@
 
             .hero h1 {
                 font-size: 40px;
-                font-weight: bold;
-                font-family: Georgia, serif;
-
+                font-weight: semi bold;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                
             }
 
             .hero p {
@@ -325,19 +329,19 @@
             color: #777;
         }
 
-    </style>
+    </style>-->
 </head>
 <body>
 <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
     <nav class="sidebar" id="sidebar">
         <br><br>
         <h2>Sidebar Menu</h2>
-        <a href="{{ url('/login') }}">🔒 login</a><br>
+        <a href="{{ url('/login') }}">🔒 LOGIN</a><br>
         <!--DONT FORGET TO CHANGE URL-->
-        <a href="{{ url('/Profile') }}"><i class="fas fa-cog"></i> 🏠 Home</a><br>
-        <a href="#"><i class="fas fa-phone"></i> 📂 About</a><br>
-        <a href="#"><i class="fas fa-phone"></i> ⚙️ Contact</a><br>
-        <a href="#"><i class="fas fa-phone"></i> 📞 Features</a><br>
+        <a href="#><i class="fas fa-cog"></i> 🏠 HOME</a><br>
+        <a href="#"><i class="fas fa-phone"></i> 📂 ABOUT</a><br>
+        <a href="#"><i class="fas fa-phone"></i> ⚙️ CONTACT</a><br>
+        <a href="#"><i class="fas fa-phone"></i> 📞 FEATURES</a><br>
     </nav>
 <header>
         <a href="#" class="logo">TheBukuPink</a>
@@ -363,7 +367,7 @@
             <p>Track your pregnancy, book doctor appointments, and get expert guidance, all in one place.</p>
         </div>
     </section>
-
+<div data-aos="fade-up">
     <section class="overview">
         <div class="overview-item">
             <img src="{{ asset('images/calendar.png') }}" alt="Pregnancy Tracker Icon" width="70" height="70">
@@ -381,7 +385,8 @@
             <p>Personalized diet recommendations.</p>
         </div>
     </section>
-
+</div>
+<div data-aos="fade-up">
     <section class="detailed-features">
         <div class="feature-item">
             <img src="{{ asset('images/lp1.jpg') }}" alt="Pregnancy Tracker">
@@ -404,7 +409,8 @@
             <p>Discuss and share your journey with fellow users. </p>
         </div>
     </section>
-
+</div>
+<div data-aos="fade-up">
     <section class="who-can-use">
         <h2>Who Can Use This?</h2>
         <div class="user-group">
@@ -418,7 +424,8 @@
             <p>Manage appointments and track patient progress.</p>
         </div>
     </section>
-    
+</div>
+<div data-aos="fade-up"> 
     <section class="testimonial-section">
         
         <h2 class="section-title">MOMS SHARE THEIR PREGNANCY JOURNEYS</h2>
@@ -432,7 +439,7 @@
                 TheBukuPink is a lifesaver for expecting parents! Their comprehensive articles and supportive community have guided us through every stage of pregnancy. 
                 I feel more prepared and confident knowing I have such a reliable resource at my fingertips.
             </p>
-            <p class="testimonial-author">- Samantha Lee</p>
+            <p class="testimonial-author">- Wan Izzat</p>
         </div>
 
         <div class="testimonial">
@@ -440,12 +447,11 @@
                 TheBukuPink has been an incredible resource throughout my pregnancy journey. Their expert advice and user-friendly site make it easy to find trustworthy information. 
                 I truly appreciate the depth of knowledge shared on this platform!
             </p>
-            <p class="testimonial-author">- Alicia Tan</p>
+            <p class="testimonial-author">- Izzat Haikal</p>
         </div>
     </div>
 </section>
-
-
+</div>
     <footer>
         <p>&copy; 2025 TheBukuPink. All Rights Reserved.</p>
     </footer>
@@ -456,5 +462,10 @@
             document.getElementById("sidebar").classList.toggle("active");
         }
     </script>
+
+<script>
+    AOS.init();
+</script>
+
 </body>
 </html>
