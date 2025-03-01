@@ -165,7 +165,7 @@
                 </div>
                 <div class="input-group">
                     <label>Date of Birth</label>
-                    <input type="text" placeholder="1999-09-09">
+                    <input type="date" placeholder="1999-09-09">
                 </div>
             </div>
     </div>

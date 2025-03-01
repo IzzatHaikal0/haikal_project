@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
+    @vite(['resources/css/app.css'])
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TheBukuPink - Your Pregnancy Journey</title>
@@ -118,6 +118,8 @@
             .hero img {
                 width: 100%;
                 height: auto;
+                background: rgb(0, 0, 0);
+                filter: blur(3px); /* Add blur effect */
             }
 
             .hero-content {
@@ -125,18 +127,22 @@
                 top: 50%; /* Center vertically */
                 left: 50%;
                 transform: translate(-50%, -50%);
-                background: rgba(0, 0, 0, 0.5); /* Dark semi-transparent background */
-                color: white; /* Make text stand out */
+                background: rgba(0, 0, 0, 0); /* Dark semi-transparent background */
+                color: black; /* Make text stand out */
                 padding: 20px 40px;
                 border-radius: 12px;
                 width: 80%; /* Adjust width for better layout */
                 max-width: 600px; /* Prevent it from being too wide */
+
+                
                 
             }
 
             .hero h1 {
-                font-size: 2rem;
+                font-size: 40px;
                 font-weight: bold;
+                font-family: Georgia, serif;
+
             }
 
             .hero p {
@@ -259,6 +265,66 @@
             height: 50px;
         }
 
+        .testimonial-section {
+            padding: 50px 20px;
+        }
+
+        .label {
+            display: inline-block;
+            background: #EAEAEA;
+            padding: 5px 10px;
+            font-size: 12px;
+            border-radius: 10px;
+            color: #555;
+  
+            
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 10px;
+            color: #222;
+            text-align: center;
+            
+        }
+
+        .section-description {
+            font-size: 14px;
+            color: #666;
+            margin: 10px auto 30px;
+            max-width: 600px;
+        }
+
+
+        .testimonials {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .testimonial {
+            background: #f7f7f7;
+            padding: 20px;
+            max-width: 400px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .testimonial-text {
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 10px;
+            text-align: justify;
+        }
+
+        .testimonial-author {
+            font-size: 12px;
+            font-weight: bold;
+            color: #777;
+        }
+
     </style>
 </head>
 <body>
@@ -352,6 +418,33 @@
             <p>Manage appointments and track patient progress.</p>
         </div>
     </section>
+    
+    <section class="testimonial-section">
+        
+        <h2 class="section-title">MOMS SHARE THEIR PREGNANCY JOURNEYS</h2>
+        <p class="section-description">
+            TheBukuPink’s insights transformed my pregnancy journey, providing invaluable guidance and support. 
+            Highly recommend for all expectant mothers!
+        </p>
+    <div class="testimonials">
+        <div class="testimonial">
+            <p class="testimonial-text">
+                TheBukuPink is a lifesaver for expecting parents! Their comprehensive articles and supportive community have guided us through every stage of pregnancy. 
+                I feel more prepared and confident knowing I have such a reliable resource at my fingertips.
+            </p>
+            <p class="testimonial-author">- Samantha Lee</p>
+        </div>
+
+        <div class="testimonial">
+            <p class="testimonial-text">
+                TheBukuPink has been an incredible resource throughout my pregnancy journey. Their expert advice and user-friendly site make it easy to find trustworthy information. 
+                I truly appreciate the depth of knowledge shared on this platform!
+            </p>
+            <p class="testimonial-author">- Alicia Tan</p>
+        </div>
+    </div>
+</section>
+
 
     <footer>
         <p>&copy; 2025 TheBukuPink. All Rights Reserved.</p>
