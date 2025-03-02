@@ -10,6 +10,7 @@
     <!--<link href="../css/styles.css" rel="stylesheet">-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
          /* General Styles */
@@ -131,7 +132,7 @@
             <h2>Sidebar Menu</h2>
             <a href="{{ url('/PregnancyTracker') }}"><i class="fas fa-phone"></i> Dashboard</a><br>
             <a href="{{ url('/Profile') }}"><i class="fas fa-cog"></i> Profile</a><br>
-            <a href="#"><i class="fas fa-phone"></i> Appointment</a><br>
+            <a href="{{ url('/Appointment') }}"><i class="fas fa-phone"></i> Appointment</a><br>
             <a href="#"><i class="fas fa-phone"></i> Nutritions</a><br>
             <a href="#"><i class="fas fa-phone"></i> Community</a><br>
             <a href="#"><i class="fas fa-phone"></i> ChatBot</a><br>

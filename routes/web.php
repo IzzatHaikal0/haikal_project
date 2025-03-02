@@ -26,3 +26,7 @@ Route::get('/Profile', function () {
 Route::get('/PregnancyTracker', function() {
     return view('PregnancyTracker.ViewTracker');
 });
+
+Route::get('/Appointment', function() {
+    return view('Appointment.ViewAppointment');
+});
