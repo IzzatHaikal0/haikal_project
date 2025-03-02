@@ -12,6 +12,7 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    @vite('resources/css/app.css')
     <!--<style>
                 /* General Styles */
             body {
@@ -331,6 +332,7 @@
 
     </style>-->
 </head>
+
 <body>
 <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
     <nav class="sidebar" id="sidebar">
