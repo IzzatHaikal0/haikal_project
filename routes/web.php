@@ -30,3 +30,7 @@ Route::get('/PregnancyTracker', function() {
 Route::get('/Appointment', function() {
     return view('Appointment.ViewAppointment');
 });
+
+Route::get('/test', function() {
+    return view('test');
+});

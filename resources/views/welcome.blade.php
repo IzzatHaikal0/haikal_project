@@ -340,7 +340,7 @@
         <h2>Sidebar Menu</h2>
         <a href="{{ url('/login') }}">🔒 LOGIN</a><br>
         <!--DONT FORGET TO CHANGE URL-->
-        <a href="#><i class="fas fa-cog"></i> 🏠 HOME</a><br>
+        <a href="{{ url('/test') }}"><i class="fas fa-cog"></i> 🏠 HOME</a><br>
         <a href="#"><i class="fas fa-phone"></i> 📂 ABOUT</a><br>
         <a href="#"><i class="fas fa-phone"></i> ⚙️ CONTACT</a><br>
         <a href="#"><i class="fas fa-phone"></i> 📞 FEATURES</a><br>
